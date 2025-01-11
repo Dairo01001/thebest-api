@@ -6,4 +6,5 @@ module.exports = {
     const roles = await Roll.findAll();
     return roles.filter(({ role }) => role !== 'ADMIN');
   },
+  createRoll: async (role) => Roll.create({ role }),
 };
